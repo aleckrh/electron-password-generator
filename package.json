@@ -1,0 +1,39 @@
+{
+  "name": "electron-password-generator",
+  "version": "1.0.0",
+  "description": "Electron Password Generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "release": "npm run release:win",
+    "release:win": "electron-builder --win"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aleckrh/electron-password-generator"
+  },
+  "keywords": [
+    "tool",
+    "password"
+  ],
+  "author": "Alejandro RH",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-builder": "^23.0.3",
+    "electron-packager": "^15.5.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "build": {
+    "productName": "Password Generator",
+    "appId": "com.aleckrh.electron_password_generator",
+    "publish": {
+      "provider": "github",
+      "releaseType": "draft"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/img/icon.png"
+    }
+  }
+}

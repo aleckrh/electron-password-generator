@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Password Generator</h2>
+        <div class="result">
+            <div class="result__title field-title">Generated Password</div>
+            <div class="result__info right">click to copy</div>
+            <div class="result__info left">copied</div>
+            <div class="result__viewbox" id="result">CLICK GENERATE</div>
+            <button id="copy-btn" style="--x: 0; --y: 0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                </svg>
+            </button>
+        </div>
+        <div class="length range__slider" data-min="4" data-max="32">
+            <div class="length__title field-title" data-length='0'>length:</div>
+            <input id="slider" type="range" min="4" max="32" value="12" />
+        </div>
+
+        <div class="settings">
+            <span class="settings__title field-title">settings</span>
+            <div class="setting">
+                <input type="checkbox" id="uppercase" checked />
+                <label for="uppercase">Include Uppercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="lowercase" checked />
+                <label for="lowercase">Include Lowercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="number" checked />
+                <label for="number">Include Numbers</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="symbol" />
+                <label for="symbol">Include Symbols</label>
+            </div>
+        </div>
+
+        <button class="btn generate" id="generate">Generate Password</button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
